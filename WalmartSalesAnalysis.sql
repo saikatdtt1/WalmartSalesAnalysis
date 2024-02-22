@@ -156,3 +156,7 @@ select Customer_type, round(sum(Total),2) as revenue from salesdata group by Cus
 
 select Customer_type, round(avg(Vat),2) as vat_count from salesdata group by Customer_type;
 
+## Which city has the largest tax percent/ VAT (Value Added Tax)?
+
+SELECT city, ROUND(AVG(Vat), 2) AS avg_vat FROM salesdata GROUP BY city ORDER BY avg_vat DESC;
+
